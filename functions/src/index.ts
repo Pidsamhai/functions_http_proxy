@@ -69,7 +69,7 @@ server.all("/:template/*", async (req, res) => {
       method: req.method as Method,
       headers: template.headers,
       url: url,
-      params: template.params,
+      params: query,
     });
 
     if (result.headers["Content-type"] || result.headers["content-type"]) {
